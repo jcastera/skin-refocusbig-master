@@ -15,7 +15,7 @@
 		<focusedlayout width="640" height="52">
 			<control type="image">
 				<posy>0</posy>
-				<width></width>
+				<width>375</width>
 				<height>200</height>
 				<aspectratio align="left">stretch</aspectratio>
 				<texture border="1">home/menuSelectOriginal.png</texture>
@@ -23,35 +23,15 @@
 				<animation effect="fade" start="100" end="50" time="350" condition="System.IdleTime(5) + !Skin.HasSetting(home.menuselect.disablefading)">Conditional</animation>
 				<visible>!Control.HasFocus(888) + !Skin.HasSetting(home.menuselect.realaska) + !Skin.HasSetting(home.menuselect.realaska)</visible>
 			</control>
-		<control type="image">
-				<posy>0</posy>
-				<width min="75" max="640">auto</width>
-				<height>200</height>
-				<aspectratio align="left">stretch</aspectratio>
-				<texture border="1">home/menuSelectOriginal.png</texture>
-				<include>home_ListScroll</include>
-				<animation effect="fade" start="100" end="50" time="350" condition="System.IdleTime(5) + !Skin.HasSetting(home.menuselect.disablefading)">Conditional</animation>
-				<visible>!Control.HasFocus(888) + !Skin.HasSetting(home.menuselect.realaska) + Skin.HasSetting(home.menulabel)</visible>
-			</control>
 			<control type="image">
 				<posy>0</posy>
-				<width></width>
+				<width>375</width>
 				<height>200</height>
 				<aspectratio align="left">stretch</aspectratio>
 				<texture border="1">home/menuSelectReAlaska.png</texture>
 				<include>home_ListScroll</include>
 				<animation effect="fade" start="100" end="50" time="350" condition="System.IdleTime(5) + !Skin.HasSetting(home.menuselect.disablefading)">Conditional</animation>
 				<visible>!Control.HasFocus(888) + Skin.HasSetting(home.menuselect.realaska)</visible>
-			</control>
-			<control type="image">
-				<posy>0</posy>
-				<width min="75" max="640">auto</width>
-				<height>200</height>
-				<aspectratio align="left">stretch</aspectratio>
-				<texture border="1">home/menuSelectReAlaska.png</texture>
-				<include>home_ListScroll</include>
-				<animation effect="fade" start="100" end="50" time="350" condition="System.IdleTime(5) + !Skin.HasSetting(home.menuselect.disablefading)">Conditional</animation>
-				<visible>!Control.HasFocus(888) + Skin.HasSetting(home.menuselect.realaska) + Skin.HasSetting(home.menulabel)</visible>
 			</control>
 			<!--
 			<control type="image">
@@ -64,18 +44,6 @@
 				<visible allowhiddenfocus="true">[Container(300).HasFocus(21) | Container(300).HasFocus(22)]</visible>	
 			</control>
 			-->
-			<control type="label">
-				<posy>70</posy>
-				<posx>20</posx>
-				<width>640</width>
-				<height>50</height>
-				<font>homeMenu</font>
-				<align>left</align>
-				<textcolor>Color5</textcolor>
-				<label>$INFO[ListItem.Label] $INFO[ListItem.Label2]</label>
-				<wrapmultiline>true</wrapmultiline>
-				<visible>Skin.HasSetting(home.menulabel)</visible>
-			</control>
 			<control type="label">
 				<posy>70</posy>
 				<posx>20</posx>

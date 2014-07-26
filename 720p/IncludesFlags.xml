@@ -91,10 +91,9 @@
 			<width>256</width>
 			<height>64</height>
 			<aspectratio align="center">keep</aspectratio>
-			<texture>rating/MPAA_R.png</texture>
+			<texture>Listitem.Property(mediaTag::contentRating)</texture>
 			<colordiffuse>Color4</colordiffuse>
-			<visible>substring(ListItem.MPAA,R)</visible>
-			<visible>Container.Content(movies)</visible>
+			
 		</control>
 		<control type="image">
 			<description>Rated NC-17</description>
@@ -520,42 +519,42 @@
 				<height>64</height>
 				<texture>$INFO[ListItem.Property(mediaTag-videoResolution),flags/video/resolution/,.png]</texture>
 				<aspectratio align="center">keep</aspectratio>
-				<visible>[Container.Content(movies) | Container.Content(episodes) | Container.Content(musicvideos)]</visible>
+				<visible></visible>
 			</control>
 			<control type="image">
 				<width>96</width>
 				<height>64</height>
 				<texture>$INFO[ListItem.Property(mediaTag-videoCodec),flags/codec/,.png]</texture>
 				<aspectratio align="center">keep</aspectratio>
-				<visible>[Container.Content(movies) | Container.Content(episodes) | Container.Content(musicvideos)]</visible>
+				<visible></visible>
 			</control>
 			<control type="image">
 				<width>96</width>
 				<height>64</height>
 				<texture>$INFO[ListItem.Property(mediaTag-audioCodec),flags/codec/,.png]</texture>
 				<aspectratio align="center">keep</aspectratio>
-				<visible>[Container.Content(movies) | Container.Content(episodes) | Container.Content(musicvideos)]</visible>
+				<visible></visible>
 			</control>
 			<control type="image">
 				<width>96</width>
 				<height>64</height>
 				<texture>$INFO[ListItem.Property(mediaTag-aspectRatio),flags/video/aspectratio/,.png]</texture>
 				<aspectratio align="center">keep</aspectratio>
-				<visible>[Container.Content(movies) | Container.Content(episodes) | Container.Content(musicvideos)]</visible>
+				<visible></visible>
 			</control>
 			<control type="image" id="99799">
 				<width>96</width>
 				<height>64</height>
-				<texture fallback="empty">$VAR[flag</texture>
+				<texture fallback="empty">$VAR[flag]</texture>
 				<aspectratio align="center">keep</aspectratio>
-				<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(musicvideos)</visible>
+				<visible></visible>
 			</control>
 			<control type="image" id="99899">
 				<width>96</width>
 				<height>64</height>
 				<texture>$VAR[flag_Studio_alt]</texture>
 				<aspectratio align="center">keep</aspectratio>
-				<visible>StringCompare(Control.GetLabel(99799),empty) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(musicvideos)]</visible>
+				<visible></visible>
 			</control>
 		</control>
 	</include>

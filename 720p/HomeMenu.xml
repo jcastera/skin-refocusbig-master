@@ -1,48 +1,45 @@
 <includes>
+
+	<include name="HeightNoLogo">
+		<height>700</height>
+		<movement>10</movement>
+	</include>
+	
+	<include name="HeightWithLogo">
+		<height>550</height>
+		<movement>7</movement>
+	</include>
+	
 	<include name="HomeMenu">
-		<control type="list" id="300">
+		<control type="fixedlist" id="300">
 			<posy>20</posy>
-			<width>1000</width>
-			<height>700</height>
+			<width>1100</width>
+			<include condition="!Skin.HasSetting(hideplexhomelogo)">HeightWithLogo</include>
+			<include condition="Skin.HasSetting(hideplexhomelogo)">HeightNoLogo</include>
 			<onup>300</onup>
 			<ondown>300</ondown>
 			<onright>5000</onright>
-			<onleft>Plex.ActivateWindow(10051)</onleft>
-			<label>$INFO[ListItem.Label2]</label>
+			<onleft>301</onleft>
 			<orientation>vertical</orientation>
 			<scrolltime tween="Cubic" easing="Out">400</scrolltime>
-			<visible allowhiddenfocus="true">![ControlGroup(1100).HasFocus() | ControlGroup(4000).HasFocus() | ControlGroup(2100).HasFocus()]</visible>
+			<visible allowhiddenfocus="true">![ControlGroup(1100).HasFocus() | ControlGroup(4000).HasFocus() | ControlGroup(2100).HasFocus() | ControlGroup(301).HasFocus()]</visible>
 			<animation effect="fade" start="100" end="0" time="0" condition="Control.HasFocus(301)">Conditional</animation>
 			<include>toggle_Menu</include>
 			<include>homeMenusLayout</include>
 			<content>
-				<!--Menu-->
-				<item id="6">
-					<label>$LOCALIZE[5]</label>
-					<onclick>ActivateWindow(settings)</onclick>
-					<visible>true</visible>
-				</item>
-				<item id="111">
-					<label>Plex Online</label>
-					<onclick>Plex.ActivateWindow(1,plexserver://channeldirectory,return)</onclick>
-					<visible>![Skin.HasSetting(systemmenu.info) | Skin.HasSetting(systemmenu.filemanager) | Skin.HasSetting(systemmenu.exit)]</visible>
+					<item id="15">
+					<description>Search Menu</description>
+					<label>$LOCALIZE[31400]</label>
+					<onclick>Plex.ActivateWindow(10051, Root)</onclick>
+<!--					search has to be the first item to get selected?-->
+<!--					<visible>Skin.HasSetting(homeMenuSearch)</visible>-->
 				</item>
 				<!--live tv-->
-				<item id="7">
+					<item id="77">
 					<label>$LOCALIZE[31090]</label>
 					<onclick>SetFocus(1120)</onclick>
 					<visible>System.GetBool(pvrmanager.enabled) + !Skin.HasSetting(homemenu.livetv) + [Skin.HasSetting(tvmenu.channels) | Skin.HasSetting(tvmenu.guide) | Skin.HasSetting(tvmenu.recordings) | Skin.HasSetting(tvmenu.timers)]</visible>
-				</item>
-				<item id="8">
-					<label>$LOCALIZE[31090]</label>
-					<onclick>ActivateWindow(PVR)</onclick>
-					<visible>System.GetBool(pvrmanager.enabled) + !Skin.HasSetting(homemenu.livetv) + ![Skin.HasSetting(tvmenu.channels) | Skin.HasSetting(tvmenu.guide) | Skin.HasSetting(tvmenu.recordings) | Skin.HasSetting(tvmenu.timers)]</visible>
-				</item>
-				<item id="999999">
-						<label>$LOCALIZE[31013]</label>
-						<onclick>XBMC.ShutDown</onclick>
-						<visible>Skin.HasSetting(home.exit)</visible>
-					</item>
+				</item>	
 			</content>
 		</control>
 		<include>homeSubMenu</include>
@@ -75,24 +72,6 @@
 					<label2>$INFO[MusicPlayer.Artist]-$INFO[MusicPlayer.Title]</label2>
 					<visible>Player.HasAudio</visible>
 				</item>
-				<item id="1">
-					<description>My Videos Button</description>
-					<label>$LOCALIZE[31971]</label>
-					<onclick>XBMC.ActivateWindow(24, Root)</onclick>
-					<visible>!Skin.HasSetting(home.showvideochannel)</visible>
-				</item>
-				<item id="2">
-					<description>My Music Button</description>
-					<label>$LOCALIZE[31972]</label>
-					<onclick>XBMC.ActivateWindow(5, Root)</onclick>
-					<visible>!Skin.HasSetting(home.showmusicchannel)</visible>
-				</item>
-				<item id="3">
-					<description>My Pics Button</description>
-					<label>$LOCALIZE[31973]</label>
-					<onclick>XBMC.ActivateWindow(2, Root)</onclick>
-					<visible>!Skin.HasSetting(home.showpicturechannel)</visible>
-				</item>
 				<!--<item id="7">
                     <description>Search Menu</description>
                     <label>$LOCALIZE[31400]</label>
@@ -102,17 +81,11 @@
 				<item id="20">
 					<label>iTunes</label>
 					<onclick>SetFocus(1120)</onclick>
-					<visible>!Skin.HasSetting(iTunesHome)</visible>
+					<visible>false</visible>
 				</item>
-				<item id="99">
-					<label>31976</label>
-					<onclick>Plex.ActivateWindow(1,plex://127.0.0.1/system/plexonline,return)</onclick>
-				</item>
-				<item id="15">
-					<label>$LOCALIZE[0]</label>
-					<onclick>ActivateWindow(Programs)</onclick>
-					<onclick>Dialog.Close(shutdownmenu)</onclick>
-					<visible>!Skin.HasSetting(homemenuPrograms)</visible>
+				<item id="111">
+					<label>Plex Online</label>
+					<onclick>Plex.ActivateWindow(1,plexserver://channeldirectory,return)</onclick>
 				</item>
 				<item id="2">
 					<label>$LOCALIZE[5]</label>
@@ -125,6 +98,8 @@
 			</content>
 		</control>
 	</include>
+	
+	
 	<include name="homeMenu_NewLists">
 		<control type="group" id="5000">
 			<visible>!Control.HasFocus(1110) + !Control.HasFocus(1120) + !Control.HasFocus(1160)</visible>

@@ -2,12 +2,9 @@
 	<!-- convert existing backspacehome setting to string -->
 	<!-- -->
 
-	<defaultcontrol always="false">300</defaultcontrol>
-	<allowoverlay>no</allowoverlay>
-	
-
+	<defaultcontrol always="true">300</defaultcontrol>
+	<allowoverlay>true</allowoverlay>
 	<controls>
-	
 	<!-- global background --->
 		<control type="largeimage">
 			<include>screen_Dimensions</include>
@@ -381,12 +378,13 @@
 				<posx>55</posx>
 				<height>37</height>
 				<width>450</width>
-				<label>[LOWERCASE]Search[/LOWERCASE]</label>
+				<label>$INFO[Container(300).ListItem.Label2]</label>
 				<align>left</align>
 				<aligny>center</aligny>
-				<font>title</font>
-				<textcolor>Color3</textcolor>
-				<shadowcolor>black</shadowcolor>					
+				<font>homeMenu</font>
+				<textcolor>Color1</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<visible>Control.hasFocus(300) + Skin.HasSetting(home.menulabel) + ![ Window.IsActive(4998) ]</visible>					
 			</control>	
 			</control>
 	</controls>

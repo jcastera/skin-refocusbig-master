@@ -2,7 +2,6 @@
 	<include file="Defaults.xml" />
 	<include file="HomeMenu.xml" />
 	<include file="HomeSubMenu.xml" />
-	<include file="HomeSubMenu_Original.xml" />
 	<include file="IncludesHomeNewLists.xml" />
 	<include file="MenuAddons.xml" />
 	<include file="MenuFiles.xml" />
