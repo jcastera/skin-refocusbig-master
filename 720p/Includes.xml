@@ -1881,7 +1881,7 @@
 		<posy>20</posy>
 		<width>950</width>
 		<aligny>center</aligny>
-		<font>windowTitle</font>
+		<font>homeMenu</font>
 		<textcolor>Color1</textcolor>
 		<include>transition_WindowTitle</include>
 		<include>autoscroll-line</include>
