@@ -7,16 +7,17 @@
 	<allowoverlay>no</allowoverlay>
 	<defaultcontrol always="true">8001</defaultcontrol>
 	<controls>
+	
 	<!-- Preplay Hack -->
 	<control type="button" id="8001">
 		<onfocus>Plex.PlayWith(VideoDefaultPlayer)</onfocus>
 		<visible>!Window.Previous(2005) + Skin.HasSetting(preplay_off)</visible>
 	</control>
-
 	<control type="button" id="8001">
 		<onfocus>ActivateWindow($INFO[Skin.String(preplay_helper)])</onfocus>
 		<visible>![ Window.Previous(videolibrary) | Window.Previous(home) | Window.Previous(51) | Window.Previous(99) ] + [ Skin.HasSetting(preplay_off) | Skin.HasSetting(preplay_after) ]</visible>
 	</control>
+
 		<!-- Background Fanart -->
 	<control type="image">
 		<include>screen_Dimensions</include>
