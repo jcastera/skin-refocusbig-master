@@ -512,6 +512,14 @@
 				<selected>Skin.HasSetting(backgroundvideo)</selected>
 				<include>button_Settings</include>
 			</control>
+		<control type="radiobutton" id="715">
+				<label>Disable Preplay Screen</label>
+				<onclick>Skin.ToggleSetting(preplay_off)</onclick>
+				<onclick>Skin.Reset(preplay_before)</onclick>
+				<onclick>Skin.Reset(preplay_after)</onclick>
+				<selected>Skin.HasSetting(preplay_off)</selected>
+				<include>button_Settings</include>
+			</control>	
 		</control>
 		<!--OSD-->
 			<control type="grouplist" id="750">
