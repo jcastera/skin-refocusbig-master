@@ -146,7 +146,7 @@
 			<posx>1100</posx>
 			<posy>690</posy>
 			<width>500</width>
-			<label>[B]$INFO[Container.NumItems][/B] $LOCALIZE[31116], $LOCALIZE[31117] $INFO[Container.SortMethod]</label>
+			<label>[B]$INFO[Container.NumItems][/B] $LOCALIZE[31116]</label>
 			<font>smallerCaps</font>
 			<textcolor>Color3</textcolor>
 			<include>transition_WindowTitle</include>
@@ -211,7 +211,7 @@
 				<posx>190</posx>
 				<posy>1</posy>
 				<width>500</width>
-				<label>[B]$INFO[Container.NumItems][/B] $LOCALIZE[31116], $LOCALIZE[31117] $INFO[Container.SortMethod]</label>
+				<label>[B]$INFO[Container.NumItems][/B] $LOCALIZE[31116]</label>
 				<font>smallerCaps</font>
 				<textcolor>Color3</textcolor>
 				<include>transition_WindowTitle</include>
@@ -221,7 +221,7 @@
 				<posx>82</posx>
 				<posy>1</posy>
 				<width>500</width>
-				<label>[B]$INFO[Container.NumItems][/B] $LOCALIZE[31116], $LOCALIZE[31117] $INFO[Container.SortMethod]</label>
+				<label>[B]$INFO[Container.NumItems][/B] $LOCALIZE[31116]</label>
 				<font>smallerCaps</font>
 				<textcolor>Color3</textcolor>
 				<include>transition_WindowTitle</include>
@@ -239,7 +239,7 @@
 			<textcolor>Color1</textcolor>
 			<label>[B]$INFO[ListItem.SortLetter][/B]</label>
 			<include>transition_WindowTitle</include>
-			<visible>Skin.HasSetting(sortletter.enable) + Container.Scrolling + [StringCompare(Container.SortMethod,$LOCALIZE[551]) | StringCompare(Container.SortMethod,$LOCALIZE[561]) | StringCompare(Container.SortMethod,$LOCALIZE[558]) | StringCompare(Container.SortMethod,$LOCALIZE[557]) | StringCompare(Container.SortMethod,$LOCALIZE[556])] + !Window.IsActive(script-globalsearch-main.xml) </visible>
+			<visible>Skin.HasSetting(sortletter.enable) + Container.Scrolling + [StringCompare(Container.SortMethod,$LOCALIZE[551]) | StringCompare(Container.SortMethod,$LOCALIZE[561]) | StringCompare(Container.SortMethod,$LOCALIZE[558]) | StringCompare(Container.SortMethod,$LOCALIZE[557]) | StringCompare(Container.SortMethod,$LOCALIZE[556])] </visible>
 		</control>
 	</include>
 	<include name="global_Devmode">
@@ -1909,7 +1909,7 @@
 	</include>
 	<include name="windowTitle_Programs">
 		<control type="label">
-			<label>[LOWERCASE]$LOCALIZE[0][/LOWERCASE]</label>
+			<label>[LOWERCASE]Channels[/LOWERCASE]</label>
 			<include>windowTitle</include>
 		</control>
 	</include>

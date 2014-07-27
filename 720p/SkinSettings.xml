@@ -168,13 +168,7 @@
 				<visible>Skin.HasSetting(home.time) + Skin.HasSetting(home.date)</visible>
 			</control>
 			<!--statistics-->
-			<control type="radiobutton" id="108">
-				<label>Show Quit on Home Menu</label>
-				<onclick>Skin.ToggleSetting(home.exit)</onclick>
-				<selected>Skin.HasSetting(home.exit)</selected>
-				<include>button_Settings</include>
-				<visible></visible>
-			</control>
+			
 			<!--search CURRENTLY REMOVED
 			<control type="radiobutton" id="110">
 				<label>$LOCALIZE[31933]</label>
@@ -437,7 +431,7 @@
 			</control>
 			<!--item count-->
 			<control type="radiobutton" id="704">
-				<label>$LOCALIZE[31040]</label>
+				<label>Show Item Count</label>
 				<onclick>Skin.ToggleSetting(numitems.enable)</onclick>
 				<selected>Skin.HasSetting(numitems.enable)</selected>
 				<include>button_Settings</include>
