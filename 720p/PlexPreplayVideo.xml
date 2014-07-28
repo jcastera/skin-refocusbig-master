@@ -23,7 +23,7 @@
 		<include>screen_Dimensions</include>
 		<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
 	</control>
-		<control type="image">
+	<control type="image">
 		<include>screen_Dimensions</include>
 		<texture background="true">overlays/background.png</texture>					
 		<include>transition_Toast</include>
