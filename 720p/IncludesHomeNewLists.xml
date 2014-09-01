@@ -123,7 +123,7 @@
 			<label>$INFO[Container(11000).ListItem(0).Genre]</label>
 			<include>list_Label-sub</include>
 		</control>
-
+ 
 		<control type="label">
 			<visible>Container(11000).ListItem(0).Type(episode)</visible>
 			<posx>10</posx>

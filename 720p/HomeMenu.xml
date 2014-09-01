@@ -1,4 +1,4 @@
-<includes>
+ <includes>
 
 	<include name="HeightNoLogo">
 		<height>700</height>
@@ -34,12 +34,12 @@
 <!--					search has to be the first item to get selected?-->
 <!--					<visible>Skin.HasSetting(homeMenuSearch)</visible>-->
 				</item>
-				<!--live tv-->
-					<item id="77">
-					<label>$LOCALIZE[31090]</label>
-					<onclick>SetFocus(1120)</onclick>
-					<visible>System.GetBool(pvrmanager.enabled) + !Skin.HasSetting(homemenu.livetv) + [Skin.HasSetting(tvmenu.channels) | Skin.HasSetting(tvmenu.guide) | Skin.HasSetting(tvmenu.recordings) | Skin.HasSetting(tvmenu.timers)]</visible>
-				</item>	
+					<item id="16">
+					<description>Update</description>
+					<label>Update and Restart</label>
+					<onclick>Plex.UpdateAndRestart</onclick>
+					<visible>System.UpdateIsAvailable</visible>
+				</item>
 			</content>
 		</control>
 		<include>homeSubMenu</include>

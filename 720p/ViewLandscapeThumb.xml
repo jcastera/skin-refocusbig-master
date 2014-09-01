@@ -70,7 +70,7 @@
 			<include>transition_Container</include>
 			<include>infoDialogHide</include>
 			<include>toggle_Menu</include>
-			<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + !SubString(Container.FolderPath,plugin.video.hulu)</visible>
+			<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
 			<include condition="Window.IsVisible(videolibrary)">LandscapeVideo</include>
 		</control>	
 		<!---window menu shade-->

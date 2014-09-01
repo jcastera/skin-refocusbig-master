@@ -995,7 +995,7 @@
 							</focusedlayout>
 						</control>
 					</control>
-					<!-- Artists +>
+					<!-- Artists +-->
 					<control type="group" id="7008">
 						<height>226</height>
 						<include>Search_Header_background</include>
@@ -1028,7 +1028,7 @@
 							<animation effect="fade" start="0" end="100" time="400" condition="true">Visible</animation>
 							<animation effect="fade" start="100" end="0" time="0" condition="true">Hidden</animation>
 						</control>
-						<!-- title bar infos ->
+						<!-- title bar infos -->
 						<control type="grouplist">
 							<posx>200</posx>
 							<posy>5</posy>
@@ -1085,7 +1085,7 @@
 							</focusedlayout>				
 						</control>
 					</control>
-					<!-- Albums + ->
+					<!-- Albums + -->
 					<control type="group" id="7009">
 						<height>226</height>
 						<include>Search_Header_background</include>
@@ -1119,7 +1119,7 @@
 							<animation effect="fade" start="0" end="100" time="400" condition="true">Visible</animation>
 							<animation effect="fade" start="100" end="0" time="0" condition="true">Hidden</animation>
 						</control>
-						<!-- title bar infos ->
+						<!-- title bar infos -->
 						<control type="grouplist">
 							<posx>200</posx>
 							<posy>5</posy>
@@ -1235,7 +1235,7 @@
 							</focusedlayout>
 						</control>
 					</control>
-					<!-- Tracks + ->
+					<!-- Tracks + -->
 					<control type="group" id="7010">
 						<height>226</height>
 						<include>Search_Header_background</include>
@@ -1269,7 +1269,7 @@
 							<animation effect="fade" start="0" end="100" time="400" condition="true">Visible</animation>
 							<animation effect="fade" start="100" end="0" time="0" condition="true">Hidden</animation>
 						</control>
-						<!-- title bar infos ->
+						<!-- title bar infos -->
 						<control type="grouplist">
 							<posx>200</posx>
 							<posy>5</posy>
@@ -1384,7 +1384,7 @@
 							</focusedlayout>
 						</control>
 					</control>
-					<!-- People + ->
+					<!-- People + -->
 					<control type="group" id="7013">
 						<height>226</height>
 						<include>Search_Header_background</include>
@@ -1417,7 +1417,7 @@
 							<animation effect="fade" start="0" end="100" time="400" condition="true">Visible</animation>
 							<animation effect="fade" start="100" end="0" time="0" condition="true">Hidden</animation>
 						</control>
-						<!-- title bar infos ->
+						<!-- title bar infos -->
 						<control type="grouplist">
 							<posx>200</posx>
 							<posy>5</posy>
@@ -1474,7 +1474,7 @@
 							</focusedlayout>
 						</control>
 					</control>
-					<!-- Clips + ->
+					<!-- Clips + -->
 					<control type="group" id="7012">
 						<height>455</height>
 						<include>Search_Header_background</include>
@@ -1490,7 +1490,7 @@
 							<posy>4</posy>
 							<label>Clips</label>
 						</control>
-						<!-- title bar infos ->
+						<!-- title bar infos -->
 						<control type="grouplist">
 							<posx>200</posx>
 							<posy>5</posy>
@@ -1618,11 +1618,11 @@
 										<font>SearchResultSmall</font>
 										<textcolor>Color3</textcolor>
 										<wrapmultiline>true</wrapmultiline>
-									</control>
+	</control>
 								</control>
 							</focusedlayout>
 						</control>
-					</control-->
+					</control>
 				</control>
 			</control>
 		</control>

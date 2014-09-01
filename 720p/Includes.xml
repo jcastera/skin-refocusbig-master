@@ -239,7 +239,7 @@
 			<textcolor>Color1</textcolor>
 			<label>[B]$INFO[ListItem.SortLetter][/B]</label>
 			<include>transition_WindowTitle</include>
-			<visible>Skin.HasSetting(sortletter.enable) + Container.Scrolling + [StringCompare(Container.SortMethod,$LOCALIZE[551]) | StringCompare(Container.SortMethod,$LOCALIZE[561]) | StringCompare(Container.SortMethod,$LOCALIZE[558]) | StringCompare(Container.SortMethod,$LOCALIZE[557]) | StringCompare(Container.SortMethod,$LOCALIZE[556])] </visible>
+			<visible>Skin.HasSetting(sortletter.enable) + Container.Scrolling </visible>
 		</control>
 	</include>
 	<include name="global_Devmode">

@@ -1,5 +1,5 @@
 <window id="6">
-	<defaultcontrol always="true">50</defaultcontrol>
+	<defaultcontrol always="false">50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<views>47,50,501,51,52,521,522,53,531,54,541,5411,54111,550,551,57,571,5711,574,575,576,592</views>
 	<onload condition="Container.Content(movies)">Skin.SetString(SectionType,movies)</onload>
@@ -21,6 +21,9 @@
 		<include>view_SlideSquare</include>
 		<include>view_IconSquare3</include>
 		<include>view_MovieSets</include>
+		<include>view_IconPoster</include>
+		<include>view_IconWide</include>
+		<include>view_IconPosterSmall</include>
 		<include condition="Skin.HasSetting(banners.enable)">view_Banner</include>
 		<include condition="Skin.HasSetting(banners.enable)">view_BannerWide</include>
 		<include condition="Skin.HasSetting(banners.enable)">view_BannerDoubleRow</include>
@@ -413,7 +416,7 @@
 					<orientation>horizontal</orientation>
 					<include>flag_MPAA</include>
 					<visible>!IsEmpty(Container(7000).ListItem.Property(IsSet))</visible>
-					<visible>Control.IsVisible(523) + Control.HasFocus(523) + [StringCompare(Container.FolderPath,videodb://1/7/) | !IsEmpty(Window(10025).Property(Content.MovieSets)) | !IsEmpty(Container(7000).ListItem.Property(IsSet))]</visible>
+					<visible>true</visible>
 				</control>
 			</control>
 		</control>
@@ -707,9 +710,7 @@
 				<visible>StringCompare(Control.GetLabel(12345678),empty) + Control.IsVisible(571) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] + ![IsEmpty(ListItem.TVShowTitle) + IsEmpty(ListItem.Title)]</visible>
 			</control>
 		</control>
-		<include>view_IconPoster</include>
-		<include>view_IconWide</include>
-		<include>view_IconPosterSmall</include>
+		
 
 <!--GALLERY------>
 		<control type="group">
